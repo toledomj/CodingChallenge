@@ -62,11 +62,11 @@
     <Compile Include="Refactor\Formas\TrianguloEquilatero.cs" />
     <Compile Include="Refactor\Formas\Cuadrado.cs" />
     <Compile Include="Refactor\FormaGeometricaNew.cs" />
-    <Compile Include="Refactor\FormaGeometricaBase.cs" />
+    <Compile Include="Refactor\Formas\FormaGeometricaBase.cs" />
     <Compile Include="Refactor\Idiomas\IdiomaIngles.cs" />
     <Compile Include="Refactor\Idiomas\IdiomaEspaniol.cs" />
     <Compile Include="Refactor\Interfaces\IFormaGeometrica.cs" />
-    <Compile Include="Refactor\FormaGeometricaEnum.cs" />
+    <Compile Include="Refactor\Enums\FormaGeometricaEnum.cs" />
     <Compile Include="Refactor\Interfaces\ITraduccionReporte.cs" />
     <Compile Include="Refactor\Idiomas\TraduccionForma.cs" />
   </ItemGroup>
