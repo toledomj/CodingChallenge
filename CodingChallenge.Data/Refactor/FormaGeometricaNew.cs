@@ -16,7 +16,7 @@ namespace CodingChallenge.Data.Refactor
 {
     public class FormaGeometricaNew
     {
-        public static string Imprimir(List<FormaGeometricaBase> listaFormas, ITraduccionReporte idioma)
+        public static string Imprimir(List<IFormaGeometrica> listaFormas, ITraduccionReporte idioma)
         {
             var sb = new StringBuilder();
 

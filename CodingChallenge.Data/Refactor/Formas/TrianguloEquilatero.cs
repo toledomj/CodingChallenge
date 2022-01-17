@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodingChallenge.Data.Refactor
 {
-    public class Triangulo : FormaGeometricaBase
+    public class TrianguloEquilatero : FormaGeometricaBase
     {
-        public Triangulo(decimal ancho) : base(FormaGeometricaEnum.TrianguloEquilatero, ancho)
+        public TrianguloEquilatero(decimal ancho) : base(FormaGeometricaEnum.TrianguloEquilatero, ancho)
         {
             // Constructor.
         }

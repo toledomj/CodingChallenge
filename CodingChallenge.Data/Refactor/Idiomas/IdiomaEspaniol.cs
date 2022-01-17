@@ -37,7 +37,8 @@ namespace CodingChallenge.Data.Refactor
             lista.Add(new TraduccionForma(FormaGeometricaEnum.Cuadrado, "Cuadrado", "Cuadrados"));
             lista.Add(new TraduccionForma(FormaGeometricaEnum.TrianguloEquilatero, "Triángulo", "Triángulos"));
             lista.Add(new TraduccionForma(FormaGeometricaEnum.Circulo, "Círculo", "Círculos"));
-            lista.Add(new TraduccionForma(FormaGeometricaEnum.Trapecio, "Trapecio", "Trapecios"));
+            lista.Add(new TraduccionForma(FormaGeometricaEnum.TrapecioIsosceles, "Trapecio", "Trapecios"));
+            lista.Add(new TraduccionForma(FormaGeometricaEnum.Rectangulo, "Rectángulo", "Rectángulos"));
 
             return lista;
         }

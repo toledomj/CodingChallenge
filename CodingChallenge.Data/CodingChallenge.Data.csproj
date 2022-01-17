@@ -54,10 +54,12 @@
   <ItemGroup>
     <Compile Include="Classes\FormaGeometrica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refactor\Formas\TrapecioIsosceles.cs" />
+    <Compile Include="Refactor\Formas\Rectangulo.cs" />
     <Compile Include="Refactor\Formas\Circulo.cs" />
     <Compile Include="Refactor\Idiomas\IdiomaAleman.cs" />
     <Compile Include="Refactor\LineaReporte.cs" />
-    <Compile Include="Refactor\Formas\Triangulo.cs" />
+    <Compile Include="Refactor\Formas\TrianguloEquilatero.cs" />
     <Compile Include="Refactor\Formas\Cuadrado.cs" />
     <Compile Include="Refactor\FormaGeometricaNew.cs" />
     <Compile Include="Refactor\FormaGeometricaBase.cs" />

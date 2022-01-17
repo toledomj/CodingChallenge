@@ -17,7 +17,7 @@ namespace CodingChallenge.Data.Tests
 
             //--------------------------------------------------------------------
             Assert.AreEqual("<h1>Lista vacía de formas!</h1>",
-                FormaGeometricaNew.Imprimir(new List<FormaGeometricaBase>(), new IdiomaEspaniol()));
+                FormaGeometricaNew.Imprimir(new List<IFormaGeometrica>(), new IdiomaEspaniol()));
         }
 
         [TestCase]
@@ -28,7 +28,7 @@ namespace CodingChallenge.Data.Tests
 
             //--------------------------------------------------------------------
             Assert.AreEqual("<h1>Empty list of shapes!</h1>",
-                FormaGeometricaNew.Imprimir(new List<FormaGeometricaBase>(), new IdiomaIngles()));
+                FormaGeometricaNew.Imprimir(new List<IFormaGeometrica>(), new IdiomaIngles()));
         }
 
         [TestCase]
@@ -39,7 +39,7 @@ namespace CodingChallenge.Data.Tests
             //Assert.AreEqual("<h1>Reporte de Formas</h1>1 Cuadrado | Area 25 | Perimetro 20 <br/>TOTAL:<br/>1 formas Perimetro 20 Area 25", resumen);
 
             //--------------------------------------------------------------------
-            var cuadrados = new List<FormaGeometricaBase> { new Cuadrado(5) };
+            var cuadrados = new List<IFormaGeometrica> { new Cuadrado(5) };
             var resumen = FormaGeometricaNew.Imprimir(cuadrados, new IdiomaEspaniol());
             Assert.AreEqual("<h1>Reporte de Formas</h1>1 Cuadrado | Area 25 | Perimetro 20 <br/>TOTAL:<br/>1 formas Perimetro 20 Area 25", resumen);
         }
@@ -59,7 +59,7 @@ namespace CodingChallenge.Data.Tests
             //Assert.AreEqual("<h1>Shapes report</h1>3 Squares | Area 35 | Perimeter 36 <br/>TOTAL:<br/>3 shapes Perimeter 36 Area 35", resumen);
 
             //--------------------------------------------------------------------
-            var cuadrados = new List<FormaGeometricaBase>
+            var cuadrados = new List<IFormaGeometrica>
             {
                 new Cuadrado(5),
                 new Cuadrado(1),
@@ -92,15 +92,15 @@ namespace CodingChallenge.Data.Tests
             //    resumen);
 
             //--------------------------------------------------------------------
-            var formas = new List<FormaGeometricaBase>
+            var formas = new List<IFormaGeometrica>
             {
                 new Cuadrado(5),
                 new Circulo(3),
-                new Triangulo(4),
+                new TrianguloEquilatero(4),
                 new Cuadrado(2),
-                new Triangulo(9),
+                new TrianguloEquilatero(9),
                 new Circulo(2.75m),
-                new Triangulo(4.2m)
+                new TrianguloEquilatero(4.2m)
             };
 
             var resumen = FormaGeometricaNew.Imprimir(formas, new IdiomaIngles());
@@ -131,15 +131,15 @@ namespace CodingChallenge.Data.Tests
             //    resumen);
 
             //--------------------------------------------------------------------
-            var formas = new List<FormaGeometricaBase>
+            var formas = new List<IFormaGeometrica>
             {
                 new Cuadrado(5),
                 new Circulo(3),
-                new Triangulo(4),
+                new TrianguloEquilatero(4),
                 new Cuadrado(2),
-                new Triangulo(9),
+                new TrianguloEquilatero(9),
                 new Circulo(2.75m),
-                new Triangulo(4.2m)
+                new TrianguloEquilatero(4.2m)
             };
 
             var resumen = FormaGeometricaNew.Imprimir(formas, new IdiomaEspaniol());
@@ -152,15 +152,15 @@ namespace CodingChallenge.Data.Tests
         [TestCase]
         public void TestResumenListaConMasTiposEnAleman()
         {
-            var formas = new List<FormaGeometricaBase>
+            var formas = new List<IFormaGeometrica>
             {
                 new Cuadrado(5),
                 new Circulo(3),
-                new Triangulo(4),
+                new TrianguloEquilatero(4),
                 new Cuadrado(2),
-                new Triangulo(9),
+                new TrianguloEquilatero(9),
                 new Circulo(2.75m),
-                new Triangulo(4.2m)
+                new TrianguloEquilatero(4.2m)
             };
 
             var resumen = FormaGeometricaNew.Imprimir(formas, new IdiomaAleman());
@@ -168,6 +168,22 @@ namespace CodingChallenge.Data.Tests
             Assert.AreEqual(
                 "<h1>Formularbericht</h1>2 Quadrate | Bereich 29 | Umfang 28 <br/>2 Kreise | Bereich 13,01 | Umfang 18,06 <br/>3 Dreiecke | Bereich 49,64 | Umfang 51,6 <br/>TOTAL:<br/>7 formen Umfang 97,66 Bereich 91,65",
                 resumen);
+        }
+
+        [TestCase]
+        public void TestResumenListaConUnRectangulo()
+        {
+            var rectangulo = new List<IFormaGeometrica> { new Rectangulo(5, 4) };
+            var resumen = FormaGeometricaNew.Imprimir(rectangulo, new IdiomaEspaniol());
+            Assert.AreEqual("<h1>Reporte de Formas</h1>1 Rectángulo | Area 20 | Perimetro 18 <br/>TOTAL:<br/>1 formas Perimetro 18 Area 20", resumen);
+        }
+
+        [TestCase]
+        public void TestResumenListaConUnTrapecio()
+        {
+            var trapecio = new List<IFormaGeometrica> { new TrapecioIsosceles(28, 12, 10) };
+            var resumen = FormaGeometricaNew.Imprimir(trapecio, new IdiomaEspaniol());
+            Assert.AreEqual("<h1>Reporte de Formas</h1>1 Trapecio | Area 120 | Perimetro 60 <br/>TOTAL:<br/>1 formas Perimetro 60 Area 120", resumen);
         }
     }
 }
