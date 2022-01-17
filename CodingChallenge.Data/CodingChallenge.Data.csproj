@@ -54,6 +54,19 @@
   <ItemGroup>
     <Compile Include="Classes\FormaGeometrica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refactor\Formas\Circulo.cs" />
+    <Compile Include="Refactor\Idiomas\IdiomaAleman.cs" />
+    <Compile Include="Refactor\LineaReporte.cs" />
+    <Compile Include="Refactor\Formas\Triangulo.cs" />
+    <Compile Include="Refactor\Formas\Cuadrado.cs" />
+    <Compile Include="Refactor\FormaGeometricaNew.cs" />
+    <Compile Include="Refactor\FormaGeometricaBase.cs" />
+    <Compile Include="Refactor\Idiomas\IdiomaIngles.cs" />
+    <Compile Include="Refactor\Idiomas\IdiomaEspaniol.cs" />
+    <Compile Include="Refactor\Interfaces\IFormaGeometrica.cs" />
+    <Compile Include="Refactor\FormaGeometricaEnum.cs" />
+    <Compile Include="Refactor\Interfaces\ITraduccionReporte.cs" />
+    <Compile Include="Refactor\Idiomas\TraduccionForma.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
